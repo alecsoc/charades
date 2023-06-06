@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Charades</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+
+  body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: -webkit-linear-gradient(left, yellow, rgb(242, 29, 146));
+  }
+
+  .main-title {
+  text-align: center;
+  margin-top: 5rem;
+  font-family: 'Anton', sans-serif;
+  color: white;
+  text-shadow: rgb(169, 165, 165) 3px 4px;
+  font-size: 3.5rem;
+  }
+
+  .container {
+  width: 500px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 0 2.5rem 4rem 2.5rem;
+  border-radius: 20px;
+  box-shadow: rgb(40, 39, 39) 5px 5px 8px;
+  margin-bottom: -10rem;
+  justify-content: center;
+  }
+
+  .card {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  margin-top: 60px;
+  }
+
+  .card-title {
+  font-size: 22px;
+  text-align: center;
+  color: rgb(28, 27, 27);
+  font-family: 'Kanit', sans-serif;
+  }
+
+  .card-content {
+  font-size: 16px;
+  margin-top: 15rem;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-family: 'Kanit', sans-serif;
+  text-shadow: rgb(169, 165, 165) 4px 3px;
+  font-size: 2.5rem;
+  }
+
+  .button {
+  background-color: #c4201b;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 12px;
+  font-weight: bold;
+  margin-left: 13rem;
+  }
+
+  @media (max-width: 580px) {
+    .container {
+      width: 300px;
+    }
+
+    .button {
+      margin-left: 7rem;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .container {
+      width: 250px;
+    }
+
+    .button {
+      margin-left: 5.5rem;
+    }
+  }
+
+  @media (max-width: 330px) {
+    .container {
+      width: 200px;
+    }
+
+    .button {
+      margin-left: 3.75rem;
+    }
+  }
+
+  @media (max-width: 280px) {
+    .main-title {
+      font-size: 3rem;
+    }
+
+    .container {
+      width: 150px;
+      padding-top: 5px;
+    }
+
+    .card-title {
+      margin-top: -2rem;
+    }
+
+    .button {
+      margin-left: 2.25rem;
+    }
+
+    .card-content {
+      font-size: 27.5px;
+    }
+  }
+
+  @media (max-width: 230px) {
+    .main-title {
+      font-size: 2.5rem;
+    }
+
+    .container {
+      width: 120px;
+    }
+
+    .button {
+      margin-left: 1.25rem;
+    }
+
+    .card-content {
+      font-size: 25px;
+    }
+  }
+
+  @media (max-height: 650px) {
+    .main-title {
+      margin-top: 0.5rem;
+    }
+
+    .card {
+      margin-top: -2rem;
+    }
+
+    .container {
+      width: 350px;
+    }
+
+    .button {
+      margin-left: 8.5rem;
+    }
+  }
+
+</style>
+</head>
+
+<body>
+
+  <h1 class="main-title">
+    Charades
+  </h1>
+
+  <div class="container">
+    <div class="card">
+      <h2 class="card-title"> Get started </h2>
+    </div>
+    <button class="button"> Generate </button>
+  </div> 
+
+  <h1 class="card-content"> 
+    Guess what I am 
+  </h1>
+
+<script>
+function startGame() {
+  var words = [
+    "The Avengers",
+    "Star Wars",
+    "Phone",
+    "Kitchen",
+    "The Lord of the Rings",
+    "Snake",
+    "Bed",
+    "Car",
+    "Apple",
+    "Hungry",
+    "Angry",
+    "Bird",
+    "Bathroom",
+    "Motobike",
+    "Gym",
+    "Corruption",
+    "Beach",
+    "Book",
+    "Pencil",
+    "Swimming",
+    "Driving",
+    "Cooking",
+    "Play guitar",
+    "Chess",
+    "Boxing",
+    "Meditating",
+    "Fishing",
+    "Building a sandcastle",
+    "Doing a magic trick",
+    "Cleaning a cat",
+    "Texting on a cell phone",
+    "Taking a photograph",
+    "Picking flowers",
+    "Baking cookies",
+    "Playing the trumpet",
+    "Watering the plants",
+    "Scary",
+    "Making a song",
+    "Lawyer",
+    "Electrician",
+    "Skateboarder",
+    "Cow",
+    "Dog",
+    "Cowboy",
+    "DJ",
+    "Mythological creature",
+    "Brushing teeth",
+    "Doing a puzzle",
+    "Riding the subway",
+    "Cleaning a room",
+    "Eating ice cream",
+    "Playing golf",
+    "Sleeping",
+    "Theatre",
+    "Martian",
+    "Concert",
+    ];
+
+  var currentWord = words[Math.floor(Math.random() * words.length)];
+
+  document.querySelector(".card-title").textContent = currentWord;
+}
+
+document.querySelector(".button").addEventListener("click", startGame);
+</script>
+</body>
+</html>
